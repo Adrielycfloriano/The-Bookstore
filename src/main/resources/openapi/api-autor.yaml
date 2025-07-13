@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: API de Autor
+  version: 1.0.0
+
+tags:
+  - name: 'Autor'
+    description: Operação para criar, buscar, atualizar, deletar um autor.
+
+paths:
+  /autor/cadastrar:
+    post:
+      tags:
+        - 'Autor'
+      summary: Cadastrar um novo Autor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../app/autor/autor-request.yaml#/components/schemas/AutorRequest'
+      responses:
+        '200':
+          description: Autor Cadastrado com sucesso
+        '409':
+          description: Autor já cadastrado
