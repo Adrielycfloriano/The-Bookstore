@@ -1,0 +1,21 @@
+##PROPERTIES
+
+properties:
+  nomeAutor:
+    type: string
+    format: string
+    example: "Coolen Hoover"
+  tituloLivro:
+    type: string
+    format: string
+    example: "O lado feio do amor"
+
+components:
+  schemas:
+    AutorRequest:
+      type: object
+      properties:
+        nomeAutor:
+          $ref: '#/properties/nomeAutor'
+        tituloLivro:
+           $ref: '#/properties/tituloLivro'
